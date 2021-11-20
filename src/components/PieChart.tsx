@@ -6,7 +6,7 @@ interface Props {
     labels: string[];
 }
 
-const colors: string[] = ['#ebdba4', '#f2d643', '#ffb248', '#eb8146', '#d95850', '#893448'];
+const colors: string[] = ['#893448', '#d95850', '#eb8146', '#ffb248', '#f2d643', '#ebdba4'];
 
 const PieChart = ({ values, labels }: Props) => {
     return (

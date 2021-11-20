@@ -8,7 +8,7 @@ interface Props {
     onAnimationEnd: () => void;
 }
 
-const Statement = ({ text, animationEnded, onAnimationEnd }: Props) => {
+const Statement: React.FC<Props> = ({ text, animationEnded, onAnimationEnd, children }) => {
     return (
         <div className={styles.statement + ' statement'}>
             <div className={styles.statementInner + ' statementInner'}>
@@ -43,6 +43,8 @@ const Statement = ({ text, animationEnded, onAnimationEnd }: Props) => {
                     )}
                 </Anime>
             </div>
+
+            {children}
         </div>
     );
 };

@@ -1,0 +1,45 @@
+.wrapper {
+    position: absolute;
+    bottom: -7rem;
+    left: 0;
+    width: 100%;
+    height: 2rem;
+    overflow: visible;
+
+    & > div {
+        position: absolute;
+        top: 0;
+        border-radius: 50%;
+        opacity: 0;
+
+        &:nth-child(1) {
+            width: 1.6rem;
+            height: 1.6rem;
+            background-color: #893448;
+        }
+
+        &:nth-child(2) {
+            width: 1.4rem;
+            height: 1.4rem;
+            background-color: #d95850;
+        }
+
+        &:nth-child(3) {
+            width: 1.2rem;
+            height: 1.2rem;
+            background-color: #ffb248;
+        }
+
+        &:nth-child(4) {
+            width: 1.0rem;
+            height: 1.0rem;
+            background-color: #f2d643;
+        }
+
+        &:nth-child(5) {
+            width: 0.8rem;
+            height: 0.8rem;
+            background-color: #ebdba4;
+        }
+    }
+}
