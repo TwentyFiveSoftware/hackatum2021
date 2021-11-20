@@ -8,48 +8,35 @@ interface Props {
 
 const colors: string[] = ['#ebdba4', '#f2d643', '#ffb248', '#eb8146', '#d95850', '#893448'];
 
-const BarChart = ({ values, labels }: Props) => {
+const PieChart = ({ values, labels }: Props) => {
     return (
         <ReactECharts
             opts={{ renderer: 'svg' }}
             style={{
-                height: '30rem',
+                height: '40rem',
                 width: '100%',
             }}
             option={{
-                xAxis: {
-                    type: 'category',
-                    data: labels,
-                    axisLabel: {
-                        fontSize: 15,
-                        fontFamily: 'Inter',
-                        color: '#ABB2BF',
-                    },
-                    axisLine: {
-                        lineStyle: {
-                            type: 'dashed',
-                            color: '#4F575F',
-                        },
-                    },
-                    axisTick: {
-                        show: false,
-                    },
-                },
-                yAxis: {
-                    show: false,
-                },
                 series: [
                     {
                         data: values.map((v, i) => ({
                             value: v,
+                            name: labels[i],
                             itemStyle: {
                                 color: colors[i],
                             },
                         })),
-                        type: 'bar',
+                        // roseType: 'radius',
+                        type: 'pie',
                         colorBy: 'data',
+                        radius: '65%',
                     },
                 ],
+                label: {
+                    fontSize: 15,
+                    fontFamily: 'Inter',
+                    color: '#ABB2BF',
+                },
                 grid: {
                     left: 0,
                     top: 0,
@@ -61,4 +48,4 @@ const BarChart = ({ values, labels }: Props) => {
     );
 };
 
-export default BarChart;
+export default PieChart;

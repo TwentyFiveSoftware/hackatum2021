@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styles from './styles/App.module.scss';
-import Chart from './components/Chart';
+import Chart, { ChartType } from './components/Chart';
 import Statement from './components/Statement';
 
 const App = () => {
@@ -9,8 +9,9 @@ const App = () => {
     return (
         <div className={styles.pageWrapper}>
             <div className={styles.page}>
-                {showChart && <Chart values={[120, 100, 150, 90, 70, 450]}
-                                     xAxisLabels={['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri']} />}
+                {showChart && <Chart chartType={ChartType.BAR}
+                                     values={[120, 100, 150, 90, 70, 450]}
+                                     labels={['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri']} />}
 
                 <Statement text={'Last Friday the *smartphone sales where *50% *higher than expected'}
                            animationEnded={showChart}

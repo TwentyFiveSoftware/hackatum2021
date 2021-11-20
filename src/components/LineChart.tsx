@@ -6,9 +6,7 @@ interface Props {
     labels: string[];
 }
 
-const colors: string[] = ['#ebdba4', '#f2d643', '#ffb248', '#eb8146', '#d95850', '#893448'];
-
-const BarChart = ({ values, labels }: Props) => {
+const LineChart = ({ values, labels }: Props) => {
     return (
         <ReactECharts
             opts={{ renderer: 'svg' }}
@@ -40,14 +38,19 @@ const BarChart = ({ values, labels }: Props) => {
                 },
                 series: [
                     {
-                        data: values.map((v, i) => ({
-                            value: v,
-                            itemStyle: {
-                                color: colors[i],
-                            },
-                        })),
-                        type: 'bar',
-                        colorBy: 'data',
+                        data: values,
+                        type: 'line',
+                        areaStyle: {
+                            color: '#d95850',
+                            opacity: 0.1,
+                        },
+                        lineStyle: {
+                            color: '#893448',
+                        },
+                        itemStyle: {
+                            color: '#893448',
+                        },
+                        symbol: 'circle',
                     },
                 ],
                 grid: {
@@ -55,10 +58,10 @@ const BarChart = ({ values, labels }: Props) => {
                     top: 0,
                     right: 0,
                 },
-                animationDelay: (index: number) => 700 + index * 100,
+                animationDelay: (index: number) => 700 + index * 50,
             }}
         />
     );
 };
 
-export default BarChart;
+export default LineChart;
