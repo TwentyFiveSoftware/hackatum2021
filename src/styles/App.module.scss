@@ -1,19 +1,38 @@
 .pageWrapper {
     width: 100%;
+    min-height: 100vh;
     display: grid;
     justify-items: center;
     padding: 10rem 5rem;
+    align-items: center;
+    background-color: #282C34;
 }
 
 .page {
-    max-width: 100rem;
+    max-width: 110rem;
     width: 100%;
-
 }
 
-h1 {
-    font-size: 5rem;
+.split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 5rem;
+    align-items: center;
+}
+
+.side {
 }
 
 .chart {
+}
+
+.statement {
+    font-size: 3.5rem;
+    color: #ffffff;
+
+    b {
+        font-size: 4.2rem;
+        color: #d95850;
+        vertical-align: middle;
+    }
 }

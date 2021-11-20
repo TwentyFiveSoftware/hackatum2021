@@ -19,12 +19,12 @@ const BarChart = ({ values, xAxisLabels }: Props) => {
                     axisLabel: {
                         fontSize: 15,
                         fontFamily: 'Inter',
-                        color: '#222222',
+                        color: '#ABB2BF',
                     },
                     axisLine: {
                         lineStyle: {
                             type: 'dashed',
-                            color: '#cccccc',
+                            color: '#4F575F',
                         },
                     },
                     axisTick: {
