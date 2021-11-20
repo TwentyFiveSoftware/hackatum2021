@@ -1,5 +1,14 @@
-.container {
-    padding: 10rem;
+.pageWrapper {
+    width: 100%;
+    display: grid;
+    justify-items: center;
+    padding: 10rem 5rem;
+}
+
+.page {
+    max-width: 100rem;
+    width: 100%;
+
 }
 
 h1 {
