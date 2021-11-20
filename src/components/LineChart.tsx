@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactECharts from 'echarts-for-react';
+import { colorScheme } from '../App';
 
 interface Props {
     values: number[];
@@ -41,14 +42,14 @@ const LineChart = ({ values, labels }: Props) => {
                         data: values,
                         type: 'line',
                         areaStyle: {
-                            color: '#d95850',
+                            color: colorScheme[1],
                             opacity: 0.1,
                         },
                         lineStyle: {
-                            color: '#893448',
+                            color: colorScheme[0],
                         },
                         itemStyle: {
-                            color: '#893448',
+                            color: colorScheme[0],
                         },
                         symbol: 'circle',
                     },

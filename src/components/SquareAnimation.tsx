@@ -1,6 +1,7 @@
 import React from 'react';
 import Anime, { anime } from 'react-anime';
 import styles from '../styles/Square.module.scss';
+import { colorScheme } from '../App';
 
 interface Props {
     onAnimationEnd: () => void;
@@ -34,11 +35,9 @@ const SquareAnimation = ({ onAnimationEnd }: Props) => {
                     });
                 }}
             >
-                <div />
-                <div />
-                <div />
-                <div />
-                <div />
+                {colorScheme.map((color, index) => (
+                    <div style={{ backgroundColor: color }} key={index} />
+                ))}
             </Anime>
         </div>
     );

@@ -1,12 +1,11 @@
 import React from 'react';
 import ReactECharts from 'echarts-for-react';
+import { colorScheme } from '../App';
 
 interface Props {
     values: number[];
     labels: string[];
 }
-
-const colors: string[] = ['#893448', '#d95850', '#eb8146', '#ffb248', '#f2d643', '#ebdba4'];
 
 const PieChart = ({ values, labels }: Props) => {
     return (
@@ -23,7 +22,7 @@ const PieChart = ({ values, labels }: Props) => {
                             value: v,
                             name: labels[i],
                             itemStyle: {
-                                color: colors[i],
+                                color: colorScheme[i],
                             },
                         })),
                         // roseType: 'radius',

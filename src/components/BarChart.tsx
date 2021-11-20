@@ -1,12 +1,11 @@
 import React from 'react';
 import ReactECharts from 'echarts-for-react';
+import { colorScheme } from '../App';
 
 interface Props {
     values: number[];
     labels: string[];
 }
-
-const colors: string[] = ['#ebdba4', '#f2d643', '#ffb248', '#eb8146', '#d95850', '#893448'];
 
 const BarChart = ({ values, labels }: Props) => {
     return (
@@ -43,7 +42,7 @@ const BarChart = ({ values, labels }: Props) => {
                         data: values.map((v, i) => ({
                             value: v,
                             itemStyle: {
-                                color: colors[i],
+                                color: [...colorScheme].reverse()[i],
                             },
                         })),
                         type: 'bar',

@@ -10,8 +10,10 @@ export interface IPage {
     labels: string[],
 }
 
+export const colorScheme: string[] = ['#893448', '#d95850', '#eb8146', '#ffb248', '#f2d643', '#ebdba4'];
+
 const App = () => {
-    const [currentPageIndex, setCurrentPageIndex] = useState<number>(2);
+    const [currentPageIndex, setCurrentPageIndex] = useState<number>(0);
 
     const nextPage = () => {
         let currentIndex = currentPageIndex;
