@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './styles/App.module.scss';
 import BarChart from './components/BarChart';
+import Statement from './components/Statement';
 
 const App = () => {
     return (
@@ -14,9 +15,7 @@ const App = () => {
                         </div>
                     </div>
                     <div className={styles.side}>
-                        <p className={styles.statement}>
-                            Last Friday the <b>smartphone</b> sales where <b>50% higher</b> than expected
-                        </p>
+                        <Statement text={'Last Friday the *smartphone sales where *50% *higher than expected'} />
                     </div>
                 </div>
             </div>
