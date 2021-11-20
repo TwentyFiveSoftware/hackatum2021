@@ -1,0 +1,14 @@
+.chart {
+    width: 70rem;
+    max-width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    overflow: visible;
+
+    & > div {
+        opacity: 0;
+        transform: translateY(5rem);
+    }
+}

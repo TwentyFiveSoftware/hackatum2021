@@ -12,6 +12,10 @@ const BarChart = ({ values, xAxisLabels }: Props) => {
     return (
         <ReactECharts
             opts={{ renderer: 'svg' }}
+            style={{
+                height: '30rem',
+                width: '100%',
+            }}
             option={{
                 xAxis: {
                     type: 'category',
@@ -51,7 +55,7 @@ const BarChart = ({ values, xAxisLabels }: Props) => {
                     top: 0,
                     right: 0,
                 },
-                animationDelay: (index: number) => index * 100,
+                animationDelay: (index: number) => 700 + index * 100,
             }}
         />
     );

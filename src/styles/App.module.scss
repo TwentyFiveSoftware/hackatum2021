@@ -9,20 +9,7 @@
 }
 
 .page {
-    max-width: 110rem;
+    max-width: 70rem;
     width: 100%;
-}
-
-.split {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 5rem;
-    align-items: center;
-}
-
-.side {
     overflow: visible;
-}
-
-.chart {
 }
