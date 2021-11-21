@@ -33,22 +33,22 @@ The configuration looks like this:
 ```typescript jsx
 const pages: IPage[] = [
     {
-        statement: 'Last Friday the *smartphone sales where *50% *higher than expected.',
+        statement: '*Prices in 2019 were on average *41% *higher than in 2018. Therefore the amount of sales was slightly lower.',
         chartType: ChartType.BAR,
-        values: [120, 100, 150, 90, 70, 450],
-        labels: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
+        values: [12.144842, 17.290347, 24.388591],
+        labels: ['2017', '2018', '2019'],
     },
     {
-        statement: 'The sales of COVID-19 tests kits *decreased *weekly by *5% over the last *5 *months.',
+        statement: 'Average *revenue *per *day has increased *25% yearly.',
         chartType: ChartType.LINE,
-        values: [100, 110, 90, 75, 60, 50],
-        labels: ['Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov'],
+        values: [1.735577, 2.049807, 2.581987],
+        labels: ['2017', '2018', '2019'],
     },
     {
-        statement: '*Vegetables were responsible for *60% *revenue last week. The average over the last year is 30%',
+        statement: '*October 2019 has been *5% better than *September in terms of *revenue.',
         chartType: ChartType.PIE,
-        values: [60, 20, 15, 5],
-        labels: ['Vegetables', 'Diary Products', 'Bakery Products', 'Cosmetics'],
+        values: [7339, 7713],
+        labels: ['Sep', 'Oct'],
     },
 ];
 ```
