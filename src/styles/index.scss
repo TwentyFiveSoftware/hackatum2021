@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
+:root {
+    --color-background: #282C34;
+    --color-text: #FFFFFF;
+    --color-text-highlight: #D95850;
+}
+
 * {
     box-sizing: border-box;
     font-family: 'Inter', sans-serif;
