@@ -42,7 +42,7 @@ const BarChart = ({ values, labels }: Props) => {
                         data: values.map((v, i) => ({
                             value: v,
                             itemStyle: {
-                                color: [...colorScheme].reverse()[i],
+                                color: colorScheme.slice(0, values.length)[values.length - i - 1],
                             },
                         })),
                         type: 'bar',
